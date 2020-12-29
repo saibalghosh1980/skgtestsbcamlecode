@@ -3,9 +3,16 @@ server:
 spring:
   application:
     name: SampleSpringBootApplication
+test:
+  value: default
 management:
   endpoints:
     web:
       exposure:
         include:
         - "*"
+---
+spring:
+  profiles: prod
+test:
+  value: prod
