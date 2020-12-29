@@ -16,3 +16,4 @@ spring:
   profiles: prod
 test:
   value: prod
+  
