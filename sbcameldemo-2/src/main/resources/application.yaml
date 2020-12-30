@@ -1,9 +1,8 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
-    name: SampleSpringBootApplication
-secondURL: http://localhost:8081/
+    name: SampleSpringBootApplication2
 test:
   value: default
 management:
@@ -16,6 +15,4 @@ management:
 spring:
   profiles: prod
 test:
-  value: prod
-secondURL: http://sbcameldemo2/
-  
+  value: pro
