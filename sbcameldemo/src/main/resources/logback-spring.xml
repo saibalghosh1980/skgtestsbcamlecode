@@ -15,7 +15,7 @@
 			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
 		</encoder>
 	</appender>
-	<springProfile name="default | test">
+	<springProfile name="default | test |prod">
 	    <property name="LOG_HOME" value="/home/wolverine/logs/${LOGFILENAME}/" />
 		<property name="APP_PROILE" value="default" />
 		<property name="LOGSTASH_HOST_PORT" value="localhost:4560" />
@@ -28,10 +28,10 @@
 		<property name="LOG_HOME" value="/logs/${LOGFILENAME}/uat" />
 		<property name="APP_PROILE" value="uat" />
 	</springProfile>
-	<springProfile name="prod">
+	<!-- <springProfile name="prod">
 		<property name="LOG_HOME" value="/logs/${LOGFILENAME}/prod" />
 		<property name="APP_PROILE" value="prod" />
-	</springProfile>
+	</springProfile> -->
 	<property name="LOG_FILE_NAME" value="${LOGFILENAME}" />
 	<!-- Logstash Appender -->
 	<springProfile name="default| dev | uat | prod">
