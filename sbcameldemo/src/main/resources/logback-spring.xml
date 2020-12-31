@@ -10,10 +10,9 @@
 		class="ch.qos.logback.core.ConsoleAppender">
 		<!-- Log message format -->
 		<encoder>
-			<!--<pattern>%d{HH:mm:ss.SSS} [${springAppName},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-}] 
-				[%thread] %-5level %logger{36} - %msg%n </pattern> -->
 			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
 		</encoder>
+		 <!-- <encoder class="com.newrelic.logging.logback.NewRelicEncoder"/> -->
 	</appender>
 	<springProfile name="default | test |prod">
 	    <property name="LOG_HOME" value="/home/wolverine/logs/${LOGFILENAME}/" />

@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    kubernetes:
+      config:
+        enabled: false
+---
+spring:
+  profiles: prod
+  cloud:
+    kubernetes:
+      config:
+        enabled: false
